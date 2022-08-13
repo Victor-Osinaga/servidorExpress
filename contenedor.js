@@ -55,7 +55,7 @@ class Contenedor{
 
   async getRandomProduct(){
     try{
-      const array = await this.getAll() ?? []
+      const array = await this.getAll()
       const randomIndex = Math.floor(Math.random()*array.length)
       return this.getById(randomIndex+1)
     }catch(err){
