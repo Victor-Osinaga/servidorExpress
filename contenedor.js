@@ -53,6 +53,16 @@ class Contenedor{
       return `no se pudo borrar`
     }
   }
+
+  async getRandomProduct(){
+    try{
+      const array = await this.getAll() ?? []
+      const randomIndex = Math.floor(Math.random()*array.length)
+      return this.getById(randomIndex+1)
+    }catch(err){
+      console.error(err)
+    }
+  }
 }
 
 let producto = new Contenedor('./productos.txt')
