@@ -1,18 +1,14 @@
 const {promises:fs} = require('fs')
 class Contenedor{
-  static newId=0;
+
   constructor(ruta){
     this.ruta=ruta;
   }
+
   async save(obj){
     let objs = await this.getAll();
-    if(objs.length == 0){
-      Contenedor.newId=1;
-    }else{
-      let long= objs.length
-      Contenedor.newId=long+1;
-    }
-    obj={id:Contenedor.newId, ...obj}
+    let ident = !objs.length ? 1 : parseInt(objs[objs.length - 1].id) + 1;
+    obj={id:ident, ...obj}
     let datos = [...objs, obj]
     try {
       await fs.writeFile(this.ruta, JSON.stringify(datos,null,2))
@@ -20,6 +16,7 @@ class Contenedor{
       throw new Error(`eror al guardar datos ${error}`)
     }
   }
+
   async getById(id){
     let objs = await this.getAll();
     let obj = objs.filter(o=>o.id==id)
@@ -36,6 +33,7 @@ class Contenedor{
       return []
     }
   }
+
   async deleteById(id){
     let objs = await this.getAll();
     let obj = objs.filter(o=>o.id!==id)
@@ -46,6 +44,7 @@ class Contenedor{
       return `No se puede borrar ese obj`
     }
   }
+  
   async deleteAll(){
     try {
       await fs.writeFile(this.ruta, JSON.stringify([],null,2))
