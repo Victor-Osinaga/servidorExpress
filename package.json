@@ -6,17 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Victor-Osinaga/servidorExpress.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Victor-Osinaga/servidorExpress/issues"
-  },
-  "homepage": "https://github.com/Victor-Osinaga/servidorExpress#readme",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1",
