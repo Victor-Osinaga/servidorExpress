@@ -1,0 +1,7 @@
+<% if(messages.length){ %>
+  <% for (const message of messages) {%>
+<li style="width:100%"><strong style="color:blue;display:inline;"><%=message.email%></strong> - <p style='color:red;display:inline;'><%=message.date%></p> <i style='color:green;display: block; overflow-wrap: break-word'><%=message.text%></i></li>
+<%}%>
+<% } else { %>
+  <li> Sin mensajes... Ingresa el primer mensaje!</li>
+  <% } %>
