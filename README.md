@@ -4,6 +4,11 @@
 * Se desarrollo con arquitectura REST.
 * Los endpoints fueron probados mediante REST CLIENT de Visual Studio Code, con resultado exitoso en cada tipo de petición.
 
+## Flujo exitoso: 
+### v1-routes > controller > service > database > service > controller > respuesta
+
+## Flujo con error en la petición: 
+### v1-routes > controller > respuesta
 
 ## Endpoints: api/v1/productos
 
