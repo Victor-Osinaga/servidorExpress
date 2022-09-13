@@ -1,32 +1,17 @@
-const {Server: HttpServer} = require('http')
-const {Server: Socket} = require('socket.io')
+import express from 'express';
+import {routerProductos as v1ProductosRouter} from './src/v1/routesProductos/routesProductos.js';
+import {routerCarritos as v1CarritosRouter} from './src/v1/routesCarrito/routesCarritos.js';
+// const v1CarritoRouter = require('./v1/routesProductos/routesCarrito.js')
 
-const app = require('./app.js')
-const {products, messages} = require('./src/contenedor/contenedor.js')
-
+const app = express()
 const PORT = process.env.PORT || 8080
 
-const httpServer = new HttpServer(app)
-const io = new Socket(httpServer)
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
-const server = httpServer.listen(PORT, ()=>{
-  console.log(`Servidor ON en ${server.address().port}`);
+app.use('/api/v1/productos', v1ProductosRouter)
+app.use('/api/v1/carritos', v1CarritosRouter)
 
-  server.on('error', error => console.log(`Error servidor ${error}`))
-})
-
-io.on('connection', async socket => {
-  socket.emit('products', products.getAll())
-
-  socket.emit('messages', messages.getAll())
-
-  socket.on('newProduct', (newProduct)=>{
-    products.save(newProduct)
-    io.sockets.emit('products', products.getAll())
-  })
-
-  socket.on('newMessage', async (newMessage)=> {
-    messages.save(newMessage)
-    io.sockets.emit('messages', messages.getAll())
-  })
+app.listen(PORT, ()=> {
+  console.log(`API is listening on port ${PORT}`);
 })

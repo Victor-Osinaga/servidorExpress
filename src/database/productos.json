@@ -1,0 +1,64 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "timestamp": "9/12/2022, 3:40:11 AM",
+      "nombre": "prod1",
+      "descripcion": "des1",
+      "codigo": "cod1",
+      "foto": "https:1//cdsdasadn3.iconfinder.com/datasdasa/icons/fashion-beauty-vol-1/512/z6-coat_winter_clothes_jacket-512.png15",
+      "precio": 111,
+      "stock": 32
+    },
+    {
+      "id": 2,
+      "timestamp": "9/12/2022, 3:40:10 AM",
+      "nombre": "asdsaddsadsasa",
+      "descripcion": "asdsadsaddsa",
+      "codigo": "asdsdasadsd",
+      "foto": "https://cdsdasadn3.iconfinder.com/datasdasa/icons/fashion-beauty-vol-1/512/z6-coat_winter_clothes_jacket-512.png15",
+      "precio": 11113211,
+      "stock": 22222132
+    },
+    {
+      "id": 3,
+      "timestamp": "9/12/2022, 3:42:37 AM",
+      "nombre": "newnew",
+      "descripcion": "newnew",
+      "codigo": "newnew",
+      "foto": "https://cdsdasadn3.iconfinder.com/datasdasa/icons/fashion-beauty-vol-1/512/z6-coat_winter_clothes_jacket-512.png15",
+      "precio": 4545,
+      "stock": 145
+    },
+    {
+      "id": 4,
+      "timestamp": "9/12/2022, 3:50:32 AM",
+      "nombre": "newnewNEW",
+      "descripcion": "newnNEWew",
+      "codigo": "newnewNEW",
+      "foto": "https://cdsNEWdasadn3.iconfinder.com/datasdasa/icons/fashion-beauty-vol-1/512/z6-coat_winter_clothes_jacket-512.png15",
+      "precio": 454599,
+      "stock": 14599
+    },
+    {
+      "id": 5,
+      "timestamp": "9/12/2022, 5:26:17 AM",
+      "nombre": "und112",
+      "descripcion": "22u1nd 1NEWew",
+      "codigo": "codigo32 1und",
+      "foto": "https://c22d1saunddsNEWdasadn3.iconfinder.com/datasdasa/icons/fashion-beauty-vol-1/512/z6-coat_winter_clothes_jacket-512.png15",
+      "precio": 12123,
+      "stock": 13123
+    },
+    {
+      "id": 6,
+      "timestamp": "9/12/2022, 11:29:57 PM",
+      "nombre": "updateN",
+      "descripcion": "upNdate",
+      "codigo": 0,
+      "foto": "update",
+      "precio": 2,
+      "stock": 2
+    }
+  ]
+}

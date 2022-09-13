@@ -1,0 +1,39 @@
+GET http://localhost:8080/api/v1/productos
+###
+GET http://localhost:8080/api/v1/productos/1
+###
+DELETE http://localhost:8080/api/v1/productos/7
+###
+###
+PUT http://localhost:8080/api/v1/productos/6 HTTP/1.1
+content-Type: application/json
+
+{
+  "nombre": "updateN",
+  "descripcion": "upNdate",
+  "codigo": "updateN",
+  "foto": "update",
+  "precio": 2,
+  "stock": 2
+}
+###
+POST http://localhost:8080/api/v1/carritos HTTP/1.1
+content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/v1/carritos/3/productos HTTP/1.1
+content-Type: application/json
+
+{"idProduct": "2"}
+
+###
+
+GET http://localhost:8080/api/v1/carritos/1/productos HTTP/1.1
+content-Type: application/json
+
+###
+DELETE http://localhost:8080/api/v1/carritos/3/productos/2
+
+###
+DELETE http://localhost:8080/api/v1/carritos/3
