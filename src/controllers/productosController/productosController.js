@@ -54,27 +54,6 @@ const createNewProductoController = async (req, res) => {
   }else {
     res.status(403).json({ error: `403 Forbidden`, data: `DELETE reservado para admins` });
   }
-
-  // if (
-  //   !body.nombre ||
-  //   !body.descripcion ||
-  //   !body.codigo ||
-  //   !body.foto ||
-  //   !body.precio ||
-  //   !body.stock
-  // ) { return }
-
-  // const newProducto = {
-  //   nombre: body.nombre,
-  //   descripcion: body.descripcion,
-  //   codigo: body.codigo,
-  //   foto: body.foto,
-  //   precio: body.precio,
-  //   stock: body.stock,
-  // }
-
-  // const createNewProducto = createNewProducto(newProducto)
-  // res.status(201).send({ status: "OK", data: createNewProducto })
 }
 
 const deleteProductoController = async (req, res) => {
