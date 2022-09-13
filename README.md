@@ -7,35 +7,35 @@
 
 ## Endpoints: api/v1/productos
 
-### GET ###{
+### GET {
   api/v1/productos (obtiene todos los productos)
   api/v1/productos/:productoId (obtiene el producto segun el ":productoId")
 }
-### POST (admin)### {
+### POST (admin) {
   api/v1/productos (crea un producto enviando a traves del body: nombre, descripcion, codigo, foto, precio, stock)
 }
 
-### DELETE (admin)### {
+### DELETE (admin) {
   api/v1/productos/:productoId (elimina un producto segun el ":productoId)
 }
 
-### PUT (admin) ###{
+### PUT (admin) {
   api/v1/productos/:productoId (actualiza un producto enviando a traves del body: nombre o descripcion o codigo o foto o precio o stock)
 }
 
 ## Endpoints: api/v1/carritos
-### POST ### {
+### POST {
   api/v1/carritos (crea un carrito y devuelve su ID)
 }
-### POST ###{
+### POST {
   api/v1/carritos/:idCart/productos (agrega producto por id enviada en el body de la petición como "idProduct")
 }
-### GET ###{
+### GET {
   api/v1/carritos/:idCart/productos (muestra los productos del carrito correspondiente a ":idCart")
 }
-### DELETE ###{
+### DELETE {
   api/v1/carritos/:idCart/productos/:idProduct (elimina un producto segun su ":idProduct" en el carrito segun su ":idCart")
 }
-### DELETE ###{
+### DELETE {
   api/v1/carritos/:idCart (vacia un carrito segun su ":idCart")
 }
